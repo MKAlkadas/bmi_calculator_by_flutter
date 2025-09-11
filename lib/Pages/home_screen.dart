@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../components/icon_content.dart';
-import '../components/reusable_card.dart';
+import '../components/card.dart';
 import '../components/button.dart';
 import '../components/round_icon_button.dart';
 import '../components/constants.dart';
@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Calc your BMI'),
+        title: const Text('Calc BMI - احسب مؤشر كتلة جسمك'),
         backgroundColor: const Color(0xE6E6E6E6),
       ),
       body: Column(
@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       colour: selectedGender == Gender.male
                           ? kActiveIconColour
                           : kInactiveIconColour,
-                      label: 'MALE',
+                      label: 'MALE - ذكر',
                     ),
                   ),
                 ),
@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       colour: selectedGender == Gender.female
                           ? kActiveIconColour
                           : kInactiveIconColour,
-                      label: 'FEMALE',
+                      label: 'FEMALE - أنثى',
                     ),
                   ),
                 ),
@@ -87,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   const Text(
-                    'HEIGHT',
+                    'HEIGHT-الطول',
                     style: kLabelTextStyle,
                   ),
                   Row(
@@ -141,7 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         const Text(
-                          'WEIGHT',
+                          'WEIGHT - الوزن',
                           style: kLabelTextStyle,
                         ),
                         Row(
@@ -196,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         const Text(
-                          'AGE',
+                          'AGE-العمر',
                           style: kLabelTextStyle,
                         ),
                         Row(
@@ -238,7 +238,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           ButtonResult(
-            buttonTitle: 'RESULT',
+            buttonTitle: 'RESULT - النتيجة',
             onTap: () {
               CalculatorBrain calc =
                   CalculatorBrain(height: height, weight: weight);

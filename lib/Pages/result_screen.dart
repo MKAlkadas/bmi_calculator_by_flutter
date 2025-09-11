@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../components/reusable_card.dart';
+import '../components/card.dart';
 import '../components/constants.dart';
 
 class ResultsScreen extends StatelessWidget {
