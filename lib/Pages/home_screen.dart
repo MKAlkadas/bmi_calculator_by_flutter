@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../components/icon_content.dart';
 import '../components/reusable_card.dart';
-import '../components/bottom_button.dart';
+import '../components/button.dart';
 import '../components/round_icon_button.dart';
 import '../components/constants.dart';
 import 'result_screen.dart';
@@ -237,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          BottomButton(
+          ButtonResult(
             buttonTitle: 'RESULT',
             onTap: () {
               CalculatorBrain calc =
