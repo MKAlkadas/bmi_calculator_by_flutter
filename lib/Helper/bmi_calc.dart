@@ -19,7 +19,7 @@ class BMICalculator {
     } else if (_bmi > 18.5) {
       return 'Normal - وزن طبيعي';
     } else {
-      return 'Underweight- نقص وزن';
+      return 'Underweight - نقص وزن';
     }
   }
 

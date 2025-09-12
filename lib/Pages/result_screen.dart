@@ -17,23 +17,13 @@ class ResultsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BMI CALCULATOR'),
+        title: const Text('Result - النتيجة'),
         backgroundColor: const Color(0xE6E6E6E6),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.all(15.0),
-              alignment: Alignment.bottomLeft,
-              child: const Text(
-                'Your Result',
-                style: kTitleTextStyle,
-              ),
-            ),
-          ),
           Expanded(
             flex: 5,
             child: ReusableCard(
@@ -53,7 +43,7 @@ class ResultsScreen extends StatelessWidget {
                   RichText(
                     textAlign: TextAlign.center,
                     text: const TextSpan(
-                        text: 'Normal BMI range:\n',
+                        text: 'الكتله الطبيعية \n Normal  range:\n',
                         style: kCorrectTitleTextStyle,
                         children: <TextSpan>[
                           TextSpan(
