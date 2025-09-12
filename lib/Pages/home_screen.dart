@@ -6,7 +6,7 @@ import '../components/button.dart';
 import '../components/round_icon_button.dart';
 import '../components/constants.dart';
 import 'result_screen.dart';
-import '../calculator_brain.dart';
+import '../Helper/bmi_calc.dart';
 
 enum Gender {
   male,
@@ -14,7 +14,7 @@ enum Gender {
 }
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -240,8 +240,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ButtonResult(
             buttonTitle: 'RESULT - النتيجة',
             onTap: () {
-              CalculatorBrain calc =
-                  CalculatorBrain(height: height, weight: weight);
+              BMICalculator calc =
+                  BMICalculator(height: height, weight: weight);
 
               Navigator.push(
                 context,
