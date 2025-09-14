@@ -18,7 +18,7 @@ class ResultsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Result - النتيجة'),
-        backgroundColor: const Color(0xE6E6E6E6),
+        backgroundColor: const Color(0xFFFFFFFF),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

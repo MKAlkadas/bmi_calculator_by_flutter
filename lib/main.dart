@@ -14,7 +14,7 @@ class BMICalculator extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
         primaryColor: const Color(0xFF0A0E21),
-        scaffoldBackgroundColor: const Color(0xE6E6E6E6),
+        scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       ),
       home: const HomeScreen(),
       routes: {

@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Calc BMI - احسب مؤشر كتلة جسمك'),
-        backgroundColor: const Color(0xE6E6E6E6),
+        backgroundColor: const Color(0xFFFFFFFF),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

@@ -34,15 +34,17 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Color(0xFF0F71DA),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const CircularProgressIndicator(),
-            const SizedBox(height: 24),
-            const Text(
+            CircularProgressIndicator(
+              color: Colors.white,
+            ),
+            SizedBox(height: 24),
+            Text(
               'Calculating your BMI...',
               style: TextStyle(color: Colors.white, fontSize: 20),
             ),
