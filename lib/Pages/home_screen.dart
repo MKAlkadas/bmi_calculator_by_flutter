@@ -5,7 +5,6 @@ import '../components/card.dart';
 import '../components/button.dart';
 import '../components/round_icon_button.dart';
 import '../components/constants.dart';
-import 'result_screen.dart';
 import '../Helper/bmi_calc.dart';
 
 enum Gender {
@@ -243,15 +242,14 @@ class _HomeScreenState extends State<HomeScreen> {
               BMICalculator calc =
                   BMICalculator(height: height, weight: weight);
 
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => ResultsScreen(
-                    bmiResult: calc.calculateBMI(),
-                    resultText: calc.getResult(),
-                    interpretation: calc.getInterpretation(),
-                  ),
-                ),
+                '/processing',
+                arguments: {
+                  'bmi': calc.calculateBMI(),
+                  'result': calc.getResult(),
+                  'interpretation': calc.getInterpretation(),
+                },
               );
             },
           ),

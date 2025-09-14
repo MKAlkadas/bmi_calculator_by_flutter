@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Pages/home_screen.dart';
+import 'Pages/processing_screen.dart';
+import 'Pages/result_screen.dart';
 
 void main() => runApp(const BMICalculator());
 
@@ -15,6 +17,26 @@ class BMICalculator extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xE6E6E6E6),
       ),
       home: const HomeScreen(),
+      routes: {
+        '/processing': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments
+              as Map<String, dynamic>;
+          return ProcessingScreen(
+            bmi: args['bmi'],
+            result: args['result'],
+            interpretation: args['interpretation'],
+          );
+        },
+        '/result': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments
+              as Map<String, dynamic>;
+          return ResultsScreen(
+            bmiResult: args['bmi'],
+            resultText: args['result'],
+            interpretation: args['interpretation'],
+          );
+        },
+      },
     );
   }
 }
